@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="newlogin.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script  src="newlogin.js"></script>
+</head>
+<body>
+    <div class="center">
+        <button id="login" onclick="showLoginForm()">LOGIN</button>
+        <!-- <button id="login" onclick="callPhpFile()">LOGIN</button> -->
+    </div>
+
+    <div class="popup">
+        <div class="close-btn" onclick="closePopup()">&times;</div>
+        <div class="form login-form">
+            <h2>Login</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Email">
+            </div>
+
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password">
+            </div>
+
+            <div class="form-element">
+                <button type="button" onclick="signIn()">Sign In</button>
+            </div>
+             <br>
+            <div class="form-element">
+                <p class="create-account-text">Not a member?<a href="#" onclick="showRegistrationForm()"> Create Account</a></p>
+            </div>
+            
+        </div>
+
+        <div class="form registration-form">
+            <h2>Register</h2>
+            <div class="form-element">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="Enter First Name" name="firstName">
+            </div>
+
+            <div class="form-element">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Enter Last Name" name="lastName">
+            </div>
+
+            <div class="form-element">
+                <label for="regEmail">Email</label>
+                <input type="text" id="regEmail" placeholder="Enter Email" name="regEmail">
+            </div>
+
+            <div class="form-element">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" placeholder="Enter Password">
+            </div>
+
+            <div class="form-element">
+                <label for="regPassword2"> Confirm Password</label>
+                <input type="password" id="regPassword2" placeholder="Confirm Password" name="regPassword2">
+            </div>
+
+            <div class="form-element">
+                <button type="submit" onclick="register()">Sign Up</button>
+            
+                <div class="form-element">
+                    <p class="create-account-text">Already a member?<a href="#" onclick="showLoginForm()"> Login Account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
